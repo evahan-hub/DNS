@@ -8,8 +8,10 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   :root{
-    --navy:#101828; --gray:#667085; --green:#001222; --adyen:#0abf53; --line:#e4e7ec; --bg:#ffffff; --soft:#f7f8fa;
+    --navy:#101828; --gray:#667085; --green:#001222; --adyen:#0abf53; --accentd:#067a3b; --muted:#7d8698; --line:#e4e7ec; --bg:#ffffff; --soft:#f7f8fa;
     --font:"Inter","Helvetica Neue",Arial,Helvetica,sans-serif;
+    /* type scale */
+    --fs-hero:58px; --fs-title:44px; --fs-subtitle:19px; --fs-lead:16px; --fs-body:15px; --fs-body-2:14px; --fs-label:13px; --fs-caption:11px; --fs-overline:11px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   ul{list-style:none}
@@ -17,13 +19,13 @@
   body{font-family:var(--font);background:#c9ccd3;color:var(--navy);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 
   /* ---------- Typography hierarchy ---------- */
-  .t-title{font-size:58px;font-weight:700;line-height:1.06;letter-spacing:-.6px;color:var(--navy)}
-  .t-subtitle{font-size:20px;font-weight:400;line-height:1.55;color:var(--gray)}
-  .t-h1{font-size:44px;font-weight:700;line-height:1.05;letter-spacing:-.4px;color:var(--navy)}
-  .t-h2{font-size:19px;font-weight:400;line-height:1.4;color:var(--gray);margin-top:14px}
+  .t-title{font-size:var(--fs-hero);font-weight:700;line-height:1.06;letter-spacing:-.6px;color:var(--navy)}
+  .t-subtitle{font-size:var(--fs-subtitle);font-weight:400;line-height:1.4;color:var(--gray)}
+  .t-h1{font-size:var(--fs-title);font-weight:700;line-height:1.05;letter-spacing:-.4px;color:var(--navy)}
+  .t-h2{font-size:var(--fs-subtitle);font-weight:400;line-height:1.4;color:var(--gray);margin-top:14px}
   .grid.combo .side .t-h1{font-weight:700;font-size:22px;line-height:1.25;letter-spacing:-.2px}
-  .t-eyebrow{font-size:14px;font-weight:700;letter-spacing:.6px;color:var(--green);text-transform:uppercase}
-  .t-desc{font-size:15.5px;font-weight:400;line-height:1.6;color:var(--gray)}
+  .t-eyebrow{font-size:var(--fs-label);font-weight:700;letter-spacing:.6px;color:var(--green);text-transform:uppercase}
+  .t-desc{font-size:var(--fs-body);font-weight:400;line-height:1.35;color:var(--gray)}
 
   /* ---------- App shell ---------- */
   .app{display:flex;height:100vh}
@@ -38,7 +40,7 @@
   .sb-list{padding:8px 6px;overflow-y:auto}
   .sb-item{display:flex;gap:9px;width:100%;text-align:left;border:none;background:none;cursor:pointer;padding:9px 10px;border-radius:6px;font-family:var(--font);font-size:13px;color:var(--gray);line-height:1.3}
   .sb-item:hover{background:var(--soft)}
-  .sb-item .idx{color:#7d8698;min-width:18px;font-variant-numeric:tabular-nums}
+  .sb-item .idx{color:var(--muted);min-width:18px;font-variant-numeric:tabular-nums}
   .sb-item.current{color:var(--navy);font-weight:700}
   .sb-item.current .idx{color:var(--navy)}
 
@@ -65,108 +67,112 @@
 
   .tag{display:inline-block;background:#e7f7ee;color:var(--adyen);border:1.5px solid var(--adyen);font-weight:700;font-size:12px;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.4px;text-transform:uppercase}
 
-  .list li{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--gray);line-height:1.55}
+  .list li{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:var(--fs-body);color:var(--gray);line-height:1.4}
   .list li:last-child{border-bottom:none}
   .list.plain li{border-bottom:none;padding:16px 0}
   .list .n{color:var(--green);font-weight:700;min-width:28px}
   .list b{color:var(--navy);font-weight:600}
-  .list .jarea{display:block;color:#7d8698;font-size:14px;margin-top:8px}
+  .list .jarea{display:block;color:var(--muted);font-size:var(--fs-caption);margin-top:8px}
 
   /* Opportunity / why slide */
   .opp{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:26px;align-items:start}
-  .ohd{font-size:13px;font-weight:700;color:var(--navy);padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:6px;letter-spacing:.2px}
+  .ohd{font-size:var(--fs-label);font-weight:700;color:var(--navy);padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:6px;letter-spacing:.2px}
   .ostat{padding:15px 0;border-bottom:1px solid var(--line)}
   .ostat:last-child{border-bottom:none}
   .ostat .big{font-size:27px;font-weight:700;color:var(--navy);line-height:1.08;letter-spacing:-.5px}
   .ostat .big .ac{color:var(--adyen)}
-  .ostat .lbl{display:block;font-size:13px;color:var(--gray);line-height:1.45;margin-top:6px}
-  .ostat .src{display:block;font-size:10.5px;color:#7d8698;line-height:1.4;margin-top:4px}
+  .ostat .lbl{display:block;font-size:var(--fs-label);color:var(--gray);line-height:1.35;margin-top:6px}
+  .ostat .src{display:block;font-size:var(--fs-caption);color:var(--muted);line-height:1.4;margin-top:4px}
   .opp.tri{grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:30px}
   .opp.tri .ostat{padding:12px 0}
   .opp.tri .big{font-size:21px;letter-spacing:-.3px}
-  .opp.tri .lbl{font-size:12px;margin-top:5px}
+  .opp.tri .lbl{font-size:var(--fs-label);margin-top:5px}
 
   /* JTBD / how */
   .jtbd li{padding:16px 0}
   .jtbd.how > li{padding:16px 0}
-  .jtbd b{display:block;color:var(--navy);font-size:16px;font-weight:600;margin-bottom:8px}
-  .jtbd span{color:var(--gray);font-size:14px;line-height:1.5}
-  .jtbd .pn{display:block;margin-top:8px;font-size:14px;color:#344054;line-height:1.45}
-  .jtbd .pn b{color:#b42318;font-weight:700;text-transform:uppercase;font-size:10.5px;letter-spacing:.4px;margin-right:6px;display:inline}
-  .jtbd .pn .pv{display:block;margin-top:6px;font-size:11px;color:#7d8698}
+  .jtbd b{display:block;color:var(--navy);font-size:var(--fs-lead);font-weight:600;margin-bottom:8px}
+  .jtbd span{color:var(--gray);font-size:var(--fs-body-2);line-height:1.4}
+  .jtbd .pn{display:block;margin-top:8px;font-size:var(--fs-body-2);color:var(--navy);line-height:1.35}
+  .jtbd .pn b{color:#b42318;font-weight:700;text-transform:uppercase;font-size:var(--fs-overline);letter-spacing:.4px;margin-right:6px;display:inline}
+  .jtbd .pn .pv{display:block;margin-top:6px;font-size:var(--fs-caption);color:var(--muted)}
   .jtbd .mini{list-style:none;margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
-  .jtbd .mini li{position:relative;padding:0 0 0 16px;border:none;font-size:14px;color:var(--gray);line-height:1.5}
+  .jtbd .mini li{position:relative;padding:0 0 0 16px;border:none;font-size:var(--fs-body-2);color:var(--gray);line-height:1.4}
   .jtbd .mini li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--green)}
 
   /* spec bullets */
-  .spec li{font-size:14px;color:var(--gray);line-height:1.5;padding:14px 0 14px 16px;position:relative}
+  .spec li{font-size:var(--fs-body-2);color:var(--gray);line-height:1.4;padding:14px 0 14px 16px;position:relative}
   .spec li::before{content:"";position:absolute;left:2px;top:18px;width:6px;height:6px;border-radius:50%;background:var(--green)}
   .spec b{color:var(--navy);font-weight:600}
 
   /* hypotheses */
   .hyp{margin-top:10px}
-  .hyp li{border:1px solid #d0d5dd;border-radius:10px;padding:20px 22px;margin-bottom:16px;line-height:1.55}
-  .hyp .hl{display:block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--adyen);margin-bottom:9px}
-  .hyp .ht{font-size:16px;color:var(--navy);font-weight:500}
+  .hyp li{border:1px solid #d0d5dd;border-radius:10px;padding:20px 22px;margin-bottom:16px;line-height:1.4}
+  .hyp .hl{display:block;font-size:var(--fs-overline);font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--adyen);margin-bottom:9px}
+  .hyp .ht{font-size:var(--fs-lead);color:var(--navy);font-weight:500}
   .hyp .ht .so{color:var(--adyen);font-weight:700}
 
   /* building blocks (numbered progression) */
   .blocks li{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
   .blocks li:last-child{border-bottom:none}
   .blocks .n{color:var(--adyen);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
-  .blocks b{display:block;color:var(--navy);font-size:16px;font-weight:600;margin-bottom:4px}
-  .blocks span{color:var(--gray);font-size:14px;line-height:1.5}
+  .blocks b{display:block;color:var(--navy);font-size:var(--fs-lead);font-weight:600;margin-bottom:4px}
+  .blocks span{color:var(--gray);font-size:var(--fs-body-2);line-height:1.4}
   .flow{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:12px;font-weight:700;letter-spacing:.3px;color:var(--adyen);text-transform:uppercase}
   .flow .ar{color:#8fd9ab}
 
   /* impact ladder */
-  .pmap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-top:30px;align-items:start}
-  .phd{font-size:13px;font-weight:700;color:var(--navy);padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:14px;letter-spacing:.2px;display:flex;align-items:baseline;gap:8px}
+  .pmap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-top:30px;align-items:stretch}
+  .pcol{display:flex;flex-direction:column}
+  .phd{font-size:var(--fs-label);font-weight:700;color:var(--navy);padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:14px;letter-spacing:.2px;display:flex;align-items:baseline;gap:8px}
   .phd .step{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--adyen);text-transform:uppercase}
-  .pcard{border:1px solid #d0d5dd;border-radius:9px;overflow:hidden;margin-bottom:14px}
-  .pcard .pj{font-size:13.5px;font-weight:700;color:var(--navy);line-height:1.25;padding:9px 12px}
-  .pcard .gain{padding:9px 12px;background:#e7f7ee;border-top:1px solid #c3ebd4}
-  .pcard .glbl{font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#067a3b;display:block;margin-bottom:4px}
-  .pcard .gtx{display:block;font-size:12.5px;font-weight:600;color:#344054;line-height:1.35;margin-bottom:5px}
-  .pcard .gev{display:block;font-size:10.5px;color:#7d8698;line-height:1.4}
+  .pcard{border:1px solid #d0d5dd;border-radius:9px;overflow:hidden;margin-bottom:14px;display:flex;flex-direction:column;flex:1}
+  .pcard .pj{font-size:var(--fs-label);font-weight:700;color:var(--navy);line-height:1.25;padding:9px 12px}
+  .pcard .gain{padding:9px 12px;background:#e7f7ee;border-top:1px solid #c3ebd4;flex:1}
+  .pcard .glbl{font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--accentd);display:block;margin-bottom:4px}
+  .pcard .gtx{display:block;font-size:var(--fs-label);font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:5px}
+  .pcard .gev{display:block;font-size:var(--fs-caption);color:var(--muted);line-height:1.4}
   .imp-bullets{margin:22px 0 0;padding:0;list-style:none}
-  .imp-bullets li{font-size:11px;color:#7d8698;line-height:1.45;padding-left:13px;position:relative;margin-top:6px}
+  .imp-bullets li{font-size:var(--fs-caption);color:var(--muted);line-height:1.35;padding-left:13px;position:relative;margin-top:6px}
   .imp-bullets li:before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:#c1c7d0}
-  .imp-bullets li b{color:#667085;font-weight:700}
+  .imp-bullets li b{color:var(--gray);font-weight:700}
 
   /* quote */
-  .quote{margin-top:18px;padding-left:14px;border-left:3px solid var(--green);font-style:italic;color:var(--navy);font-size:12.5px;line-height:1.42}
+  .quote{margin-top:18px;padding-left:16px;border-left:2px solid var(--muted);font-style:italic;color:var(--navy);font-size:var(--fs-body-2);line-height:1.4}
   .quote p{margin-bottom:18px}
   .quote p:last-child{margin-bottom:0}
-  .quote .src{display:block;font-style:normal;font-weight:600;font-size:10px;color:#7d8698;margin-top:2px;letter-spacing:.2px}
+  .quote .src{display:block;font-style:normal;font-weight:600;font-size:var(--fs-caption);color:var(--muted);margin-top:2px;letter-spacing:.2px}
 
   /* signals / evidence slide */
   .sigt{width:100%;border-collapse:collapse;margin-top:14px}
   .sigt th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--green);padding:0 0 9px;border-bottom:1px solid var(--line)}
   .sigt th.r,.sigt td.r{text-align:right}
-  .sigt td{font-size:13.5px;color:var(--gray);padding:12px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+  .sigt td{font-size:var(--fs-label);color:var(--gray);padding:12px 0;border-bottom:1px solid var(--line);vertical-align:middle}
   .sigt .th{color:var(--navy);font-weight:600}
   .sigt .vol{color:var(--navy);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
   .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:3px 9px;border-radius:20px}
   .badge.flat{background:#fef3f2;color:#b42318}
-  .badge.fall{background:#e7f7ee;color:#067a3b}
-  .sig-note{font-size:11px;color:#7d8698;line-height:1.5;margin-top:16px}
-  .sig-note b{color:#667085;font-weight:700}
-  .vq{border-left:3px solid var(--green);padding:2px 0 2px 16px;margin-bottom:20px}
-  .vq p{font-style:italic;color:var(--navy);font-size:14.5px;line-height:1.5}
-  .vq .src{display:block;font-style:normal;font-weight:600;font-size:11px;color:#7d8698;margin-top:7px;letter-spacing:.2px}
+  .badge.fall{background:#e7f7ee;color:var(--accentd)}
+  .sig-note{font-size:var(--fs-caption);color:var(--muted);line-height:1.4;margin-top:16px}
+  .sig-note b{color:var(--gray);font-weight:700}
+  .vq{border-left:2px solid var(--muted);padding:2px 0 2px 16px;margin-bottom:20px}
+  .vq p{font-style:italic;color:var(--navy);font-size:var(--fs-body-2);line-height:1.4}
+  .vq .src{display:block;font-style:normal;font-weight:600;font-size:var(--fs-caption);color:var(--muted);margin-top:7px;letter-spacing:.2px}
 
   /* many pages -> few actions (Current block) */
   .collapse{display:grid;grid-template-columns:1.4fr 36px 1fr;gap:26px;align-items:start;margin-top:24px}
-  .collapse .clbl{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#7d8698;margin-bottom:11px}
+  .collapse .clbl{font-size:var(--fs-overline);font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
   .collapse .col.act .clbl{color:var(--adyen)}
   .collapse .subl{font-size:9.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#aeb4bf;margin:0 0 7px}
-  .chips{display:flex;flex-wrap:wrap;gap:6px}
-  .chip{font-size:11px;line-height:1;font-weight:500;padding:6px 10px;border-radius:6px;border:1px solid var(--line);color:var(--gray);background:#fff;white-space:nowrap}
-  .chip.act{border-color:#9fe3bd;background:#e7f7ee;color:#067a3b}
+  .chips{display:flex;flex-direction:column;gap:7px}
+  .col:not(.act) .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+  .chip{font-size:var(--fs-label);line-height:1.3;color:var(--gray);position:relative;padding-left:13px}
+  .chip::before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:#c7cdd6}
+  .chip.act{color:var(--accentd);font-weight:600}
+  .chip.act::before{background:#4caf7d}
   .conv{display:flex;align-items:center;justify-content:center;color:#8fd9ab;align-self:center}
 
-  .foot{position:absolute;left:80px;right:80px;bottom:34px;display:flex;justify-content:space-between;font-size:12.5px;color:#7d8698}
+  .foot{position:absolute;left:80px;right:80px;bottom:34px;display:flex;justify-content:space-between;font-size:var(--fs-caption);color:var(--muted)}
 
   /* ---------- Controls ---------- */
   .topbar{position:absolute;top:20px;right:24px;z-index:30;display:flex;gap:8px}
@@ -197,10 +203,9 @@
       <button class="sb-item" data-i="2"><span class="idx">03</span><span>The North Star</span></button>
       <button class="sb-item" data-i="3"><span class="idx">04</span><span>Why this matters</span></button>
       <button class="sb-item" data-i="4"><span class="idx">05</span><span>What customers tell us</span></button>
-      <button class="sb-item" data-i="5"><span class="idx">06</span><span>First step: Fleet health</span></button>
-      <button class="sb-item" data-i="6"><span class="idx">07</span><span>Fleet health design</span></button>
-      <button class="sb-item" data-i="7"><span class="idx">08</span><span>Impact ladder</span></button>
-      <button class="sb-item" data-i="8"><span class="idx">09</span><span>What I'd love feedback on</span></button>
+      <button class="sb-item" data-i="5"><span class="idx">06</span><span>First building block: Fleet health</span></button>
+      <button class="sb-item" data-i="6"><span class="idx">07</span><span>Impact ladder</span></button>
+      <button class="sb-item" data-i="7"><span class="idx">08</span><span>What I'd love feedback on</span></button>
     </div>
   </aside>
 
@@ -223,7 +228,7 @@
         <div class="tag">Devices vision project</div>
         <div class="t-title">The first step towards<br>Device North Star: Fleet health</div>
         <p class="t-subtitle" style="margin-top:22px;max-width:680px">How might we design Devices around the jobs to be done, simpler and more intuitive, without today's fragmented journeys? The North Star sets the direction; Fleet health is our concrete first step for 2027.</p>
-        <p class="t-desc" style="margin-top:28px;font-size:14px"><b style="color:var(--navy)">Eva Han &middot; PX Designer</b></p>
+        <p class="t-desc" style="margin-top:28px;font-size:var(--fs-body-2)"><b style="color:var(--navy)">Eva Han &middot; PX Designer</b></p>
       </div>
       <div class="foot"><span>Devices vision project</span><span>01</span></div>
     </section>
@@ -267,7 +272,7 @@
                   <span class="chip act">Reassign devices</span>
                   <span class="chip act">Manage stores &amp; orders</span>
                 </div>
-                <p style="margin-top:16px;font-size:13px;line-height:1.55;color:#067a3b"><b>We keep extending pages for how we display information;</b> the actions underneath stay the same few.</p>
+                <p style="margin-top:16px;font-size:var(--fs-label);line-height:1.4;color:var(--accentd)">We keep extending pages for how we display information; the actions underneath stay the same few.</p>
               </div>
             </div></span></li>
             <li style="margin-top:16px;border-top:1px solid var(--line);padding-top:22px"><b style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Future</b><span>Simplified, JTBD-based surfaces with embedded intelligence.</span></li>
@@ -286,11 +291,18 @@
         </div>
         <div>
           <ul class="list">
-            <li><span class="n">01</span><span><b>Device intelligence</b>: business insight, payments and device health in one view, with Ask.<span style="display:block;margin-top:6px;color:#7d8698">The cost today is no bird's-eye view: merchants can't see how many devices run a setting, which firmware is live, or what a terminal just did, and work stays manual and support-heavy.</span><span class="jarea">Business enablement &middot; Fleet security analysis</span></span></li>
+            <li><span class="n">01</span><span><b>Device intelligence</b>: business, payments and device health in one view, with Ask. Replaces today's blind spot, where there's no bird's-eye view of the fleet.<span style="display:block;margin-top:6px;color:var(--navy)"><b>Fleet health is the first slice we build here.</b></span><span class="jarea">Business enablement &middot; Fleet security analysis</span></span></li>
             <li><span class="n">02</span><span><b>Devices &amp; locations</b>: lifecycle, onboarding and reassignment by prompt, troubleshooting.<span class="jarea">Lifecycle &amp; fulfilment &middot; Onboarding &amp; reassignment &middot; Troubleshooting</span></span></li>
             <li><span class="n">03</span><span><b>Device studio</b>: a wizard and simulator for config, saved as reusable profiles.<span class="jarea">Customization &middot; Payment feature configuration</span></span></li>
           </ul>
-          <p class="t-desc" style="margin-top:22px;font-size:16px">A direction we build toward, starting with <b style="color:var(--navy)">Fleet health</b>.</p>
+          <div style="margin-top:26px;padding-top:22px;border-top:1px solid var(--line)">
+            <div style="font-weight:700;color:var(--navy);font-size:var(--fs-body-2);margin-bottom:15px">AI is the thread across all three surfaces, enabling the entire job to be done, not just showing data.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
+              <div><div style="font-weight:700;color:var(--accentd);font-size:var(--fs-label);margin-bottom:3px">Ask anything</div><div style="font-size:var(--fs-caption);color:var(--gray);line-height:1.35">Query fleet, payments and device health in plain language. No dashboards to assemble.</div></div>
+              <div><div style="font-weight:700;color:var(--accentd);font-size:var(--fs-label);margin-bottom:3px">Act by prompt</div><div style="font-size:var(--fs-caption);color:var(--gray);line-height:1.35">Onboard, reassign, configure and run bulk fleet actions by describing the outcome.</div></div>
+              <div><div style="font-weight:700;color:var(--accentd);font-size:var(--fs-label);margin-bottom:3px">Next best action</div><div style="font-size:var(--fs-caption);color:var(--gray);line-height:1.35">AI surfaces what to do next and why, turning insight into decisions and self-serve.</div></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="foot"><span>Devices vision project</span><span>03</span></div>
@@ -329,85 +341,64 @@
           <div class="ocol">
             <div class="ohd">By volume &middot; Unwrap, 61,842 IPP feedback entries (Sep 2025&ndash;Sep 2026)</div>
             <table class="sigt">
-              <thead><tr><th>Theme</th><th class="r">Entries</th><th class="r">Trend</th></tr></thead>
+              <thead><tr><th>Theme</th><th class="r">Entries</th><th class="r">Sentiment</th></tr></thead>
               <tbody>
-                <tr><td class="th">Hardware &amp; connectivity failures</td><td class="r vol">~9,100</td><td class="r"><span class="badge fall">Falling</span></td></tr>
-                <tr><td class="th">Onboarding, boarding &amp; reassignment</td><td class="r vol">~7,500</td><td class="r"><span class="badge flat">Flat</span></td></tr>
-                <tr><td class="th">Firmware / SDK updates</td><td class="r vol">~2,520</td><td class="r"><span class="badge flat">Flat</span></td></tr>
-                <tr><td class="th">Settings &amp; Customer Area</td><td class="r vol">2,215</td><td class="r"><span class="badge flat">Flat</span></td></tr>
+                <tr><td class="th" style="color:var(--accentd)"><b>Hardware &amp; connectivity failures</b></td><td class="r vol">~9,100</td><td class="r"><span class="badge" style="background:#fef3f2;color:#b42318">Very negative</span></td></tr>
+                <tr><td class="th" style="color:var(--accentd)"><b>Onboarding, boarding &amp; reassignment</b></td><td class="r vol">~7,500</td><td class="r"><span class="badge" style="background:#fef3f2;color:#b42318">Negative</span></td></tr>
+                <tr><td class="th">Tap to Pay / SoftPOS</td><td class="r vol">~4,800</td><td class="r"><span class="badge" style="background:#fef3f2;color:#b42318">Very negative</span></td></tr>
+                <tr><td class="th">Fulfilment, warehousing &amp; logistics</td><td class="r vol">~2,700</td><td class="r"><span class="badge" style="background:var(--soft);color:var(--muted)">Neutral</span></td></tr>
+                <tr><td class="th" style="color:var(--accentd)"><b>Firmware / SDK updates</b></td><td class="r vol">~2,520</td><td class="r"><span class="badge" style="background:#fef3f2;color:#b42318">Negative</span></td></tr>
               </tbody>
             </table>
-            <p class="sig-note"><b>20.7% explicitly negative.</b> NPS agrees: Support and Reporting score lowest. <span style="display:block;margin-top:6px">Sources: Unwrap &middot; NPS H1 2026 &middot; IPP Slack Q&amp;A &middot; Ops / partner interviews.</span></p>
+            <p class="sig-note"><b>Counts are support tickets per theme</b> (of 61,842); themes aren't exclusive, so they flag where the pain is, not an absolute ticket count. <span style="display:block;margin-top:6px"><b>Support bottleneck:</b> lowest NPS dimension (5.71); of 323 Slack questions, 19% resolved, 61% open.</span> <span style="display:block;margin-top:6px">Sources: Unwrap &middot; NPS H1 2026 &middot; IPP Slack Q&amp;A &middot; Ops / partner interviews.</span></p>
           </div>
           <div class="ocol">
             <div class="ohd">In their words</div>
             <div class="vq"><p>"Things should be working but are not. Which devices are failing, and why?"</p><span class="src">Lightspeed &middot; platform partner</span></div>
             <div class="vq"><p>"The Customer Area is disimproved; terminal assignment is malfunctioning."</p><span class="src">Merchant, UK (NPS)</span></div>
             <div class="vq"><p>"The terminals frequently experience bugs."</p><span class="src">Merchant, JP (NPS)</span></div>
-            <div class="vq"><p>"70% of troubleshooting tickets come from live-integration merchants."</p><span class="src">Adyen Support</span></div>
+            <div class="vq"><p>"Most troubleshooting tickets come from live-integration merchants."</p><span class="src">Adyen Support</span></div>
           </div>
         </div>
       </div>
       <div class="foot"><span>Devices vision project</span><span>05</span></div>
     </section>
 
-    <!-- 6 FIRST STEP: FLEET HEALTH -->
+    <!-- 6 FIRST BUILDING BLOCK: FLEET HEALTH (merged) -->
     <section class="slide">
       <div class="imp">
-        <div class="t-h1">First step: Fleet health</div>
-        <div class="t-h2" style="margin-top:6px">Inside Device intelligence. Where the pain is sharpest and the data already exists. <b style="color:var(--navy)">WIP, 2027.</b></div>
+        <div class="t-h1">First building block: Fleet health</div>
+        <div class="t-h2" style="margin-top:6px">Inside Device intelligence, where the pain is sharpest and the data already exists. <b style="color:var(--navy)">WIP, 2027.</b></div>
         <div class="opp" style="margin-top:24px">
           <div class="ocol">
-            <div class="ohd">Why here: the specific pain</div>
+            <div class="ohd">Why here, and what we're testing</div>
             <ul class="spec">
               <li><b>Hardware fails at the counter.</b> #1 detractor, ~9,100 tickets.</li>
               <li><b>No actionable fleet reporting.</b> Reporting 5.74/7, 2nd-lowest.</li>
-              <li><b>Troubleshooting is reactive.</b> 70% of tickets from live merchants.</li>
+              <li><b>Troubleshooting is reactive.</b> Most tickets from live-integration merchants.</li>
+            </ul>
+            <ul class="hyp" style="margin-top:14px">
+              <li style="padding:0;margin-bottom:10px;border:none"><span class="hl">H1 &middot; Self-serve troubleshooting</span><span class="ht" style="font-size:var(--fs-body-2)"><b style="color:var(--navy)">Advanced logs</b> <span class="so">so that</span> merchants self-serve and Adyen gets fewer tickets.</span></li>
+              <li style="padding:0;margin-bottom:0;border:none"><span class="hl">H2 &middot; Control through metrics</span><span class="ht" style="font-size:var(--fs-body-2)"><b style="color:var(--navy)">Fleet health metrics</b> <span class="so">so that</span> merchants act and feel in control.</span></li>
             </ul>
           </div>
           <div class="ocol">
-            <div class="ohd">Why now: the data already exists</div>
-            <ul class="spec">
-              <li><b>Live telemetry:</b> connectivity, websocket health, reboots.</li>
-              <li><b>Device health:</b> battery, firmware / SDK, lifespan.</li>
-              <li><b>Logs and a per-device timeline,</b> available today.</li>
+            <div class="ohd">The design: four building blocks</div>
+            <ul class="list">
+              <li><span class="n">01</span><span><b>Fleet health overview</b>: an at-a-glance view across the fleet.</span></li>
+              <li><span class="n">02</span><span><b>What to act on</b>: the device list, down to individual logs.</span></li>
+              <li><span class="n">03</span><span><b>Fleet trends</b>: the metrics to improve, over time.</span></li>
+              <li><span class="n">04</span><span><b>Stores to watch</b>: which stores need attention, into store status.</span></li>
             </ul>
-            <p class="sig-note" style="margin-top:12px">Sources: POS logs dashboard &middot; Ops / partner interviews &middot; fleet-intelligence research.</p>
+            <p class="t-desc" style="margin-top:14px;font-size:var(--fs-body-2)">Fleet-wide <b style="color:var(--navy)">&rarr;</b> Store <b style="color:var(--navy)">&rarr;</b> Single device.</p>
           </div>
         </div>
-        <div class="t-eyebrow" style="margin-top:28px;margin-bottom:12px;display:block">Hypotheses we're testing</div>
-        <ul class="hyp" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <li style="margin-bottom:0"><span class="hl">1 &middot; Self-serve troubleshooting</span><span class="ht"><b style="color:var(--navy)">Advanced logs</b> <span class="so">so that</span> merchants self-serve and Adyen gets fewer tickets.</span></li>
-          <li style="margin-bottom:0"><span class="hl">2 &middot; Control through metrics</span><span class="ht"><b style="color:var(--navy)">Fleet health metrics</b> <span class="so">so that</span> merchants act and feel in control.</span></li>
-        </ul>
+        <p style="margin-top:18px;padding-left:16px;border-left:2px solid var(--muted);font-style:italic;color:var(--navy);font-size:var(--fs-body-2);line-height:1.4">"Why isn't this terminal working?" &middot; "Which of my stores need attention right now?" &middot; "I can't even see which terminals are locked, or why." <span style="font-style:normal;color:var(--muted)">Merchant</span></p>
       </div>
       <div class="foot"><span>Devices vision project</span><span>06</span></div>
     </section>
 
-    <!-- 7 FLEET HEALTH DESIGN -->
-    <section class="slide">
-      <div class="grid">
-        <div class="side"><div class="t-h1">Fleet health design</div><div class="t-h2">four building blocks, fleet-wide to a single device</div>
-          <div class="quote" style="margin-top:18px">
-            <p>"Why isn't this terminal working?"</p>
-            <p>"Which of my stores need attention right now?"</p>
-            <p>"I can't even see which terminals are locked, or why."<span class="src">Merchant</span></p>
-          </div>
-        </div>
-        <div>
-          <ul class="list">
-            <li><span class="n">01</span><span><b>Fleet health overview</b>: an at-a-glance view across the fleet.<span class="jarea">An overview merchants read in seconds, closing the reporting gap</span></span></li>
-            <li><span class="n">02</span><span><b>What to act on</b>: the device list, down to individual logs.<span class="jarea">Device logs on demand: diagnose and fix before a ticket</span></span></li>
-            <li><span class="n">03</span><span><b>Fleet trends</b>: the metrics to improve, over time.<span class="jarea">Shows what to improve, and whether it's working</span></span></li>
-            <li><span class="n">04</span><span><b>Stores to watch</b>: which stores need attention, into store status.<span class="jarea">Moves support from reactive to preventive</span></span></li>
-          </ul>
-          <p class="t-desc" style="margin-top:22px;font-size:16px">Fleet-wide <b style="color:var(--navy)">&rarr;</b> Store <b style="color:var(--navy)">&rarr;</b> Single device.</p>
-        </div>
-      </div>
-      <div class="foot"><span>Devices vision project</span><span>07</span></div>
-    </section>
-
-    <!-- 8 IMPACT LADDER -->
+    <!-- 7 IMPACT LADDER -->
     <section class="slide">
       <div class="imp">
         <div class="t-h1">Impact ladder</div>
@@ -434,21 +425,21 @@
           <li><b>Not yet sized:</b> financial impact (&euro;) needs Looker / Grafana.</li>
         </ul>
       </div>
-      <div class="foot"><span>Devices vision project</span><span>08</span></div>
+      <div class="foot"><span>Devices vision project</span><span>07</span></div>
     </section>
 
-    <!-- 9 FEEDBACK -->
+    <!-- 8 FEEDBACK -->
     <section class="slide center">
       <div class="wrap">
-        <div class="t-title" style="font-size:46px">What I'd love your<br>feedback on</div>
+        <div class="t-title" style="font-size:var(--fs-title)">What I'd love your<br>feedback on</div>
         <ul class="list plain" style="margin-top:22px;max-width:820px">
           <li><span class="n">01</span><span><b>Go / no-go on the three-surface framing.</b> The right North Star?</span></li>
           <li><span class="n">02</span><span>Does <b>Fleet health as the 2027 first step</b> fit the H1 2027 roadmap P0s?</span></li>
           <li><span class="n">03</span><span>One <b>global AI assistant, or one per surface?</b> How far to push prompt-based bulk actions?</span></li>
         </ul>
-        <p class="t-desc" style="margin-top:24px;font-size:16px">Thank you. Let's discuss.</p>
+        <p class="t-desc" style="margin-top:24px;font-size:var(--fs-lead)">Thank you. Let's discuss.</p>
       </div>
-      <div class="foot"><span>Devices vision project</span><span>09</span></div>
+      <div class="foot"><span>Devices vision project</span><span>08</span></div>
     </section>
 
     <div class="nav">

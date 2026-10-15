@@ -127,8 +127,8 @@
   .phd{font-size:var(--fs-label);font-weight:700;color:var(--navy);padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:14px;letter-spacing:.2px;display:flex;align-items:baseline;gap:8px}
   .phd .step{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--adyen);text-transform:uppercase}
   .pcard{border:1px solid #d0d5dd;border-radius:9px;overflow:hidden;margin-bottom:14px;display:flex;flex-direction:column;flex:1}
-  .pcard .pj{font-size:var(--fs-label);font-weight:700;color:var(--navy);line-height:1.25;padding:9px 12px}
-  .pcard .gain{padding:9px 12px;background:#e7f7ee;border-top:1px solid #c3ebd4;flex:1}
+  .pcard .pj{font-size:var(--fs-label);font-weight:700;color:var(--navy);line-height:1.25;padding:12px}
+  .pcard .gain{padding:12px;background:#e7f7ee;border-top:1px solid #c3ebd4;flex:1}
   .pcard .glbl{font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--accentd);display:block;margin-bottom:4px}
   .pcard .gtx{display:block;font-size:var(--fs-label);font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:5px}
   .pcard .gev{display:block;font-size:var(--fs-caption);color:var(--muted);line-height:1.4}
@@ -199,13 +199,11 @@
     </div>
     <div class="sb-list" id="sbList">
       <button class="sb-item" data-i="0"><span class="idx">01</span><span>Cover</span></button>
-      <button class="sb-item" data-i="1"><span class="idx">02</span><span>How we design</span></button>
+      <button class="sb-item" data-i="1"><span class="idx">02</span><span>Devices in context</span></button>
       <button class="sb-item" data-i="2"><span class="idx">03</span><span>The North Star</span></button>
-      <button class="sb-item" data-i="3"><span class="idx">04</span><span>Why this matters</span></button>
+      <button class="sb-item" data-i="3"><span class="idx">04</span><span>First building block: Fleet health</span></button>
       <button class="sb-item" data-i="4"><span class="idx">05</span><span>What customers tell us</span></button>
-      <button class="sb-item" data-i="5"><span class="idx">06</span><span>First building block: Fleet health</span></button>
-      <button class="sb-item" data-i="6"><span class="idx">07</span><span>Impact ladder</span></button>
-      <button class="sb-item" data-i="7"><span class="idx">08</span><span>What I'd love feedback on</span></button>
+      <button class="sb-item" data-i="5"><span class="idx">06</span><span>Impact ladder</span></button>
     </div>
   </aside>
 
@@ -233,67 +231,47 @@
       <div class="foot"><span>Devices vision project</span><span>01</span></div>
     </section>
 
-    <!-- 2 HOW WE DESIGN -->
+    <!-- 2 DEVICES IN CONTEXT (+ why it matters / impact) -->
     <section class="slide">
       <div class="grid">
-        <div class="side"><div class="t-h1">How we design</div><div class="t-h2" style="margin-top:14px">How might we simplify the job, without today's fragmented journeys?</div></div>
+        <div class="side">
+          <div class="t-h1">Devices in context</div>
+          <div class="t-h2" style="margin-top:14px">What we build, and why it matters</div>
+          <p class="t-desc" style="margin-top:16px"><b style="color:var(--navy)">What we do:</b> the Devices team builds and manages all of Adyen's in-person payment devices, both terminals and mobile (SoftPOS).</p>
+          <p class="t-desc" style="margin-top:12px"><b style="color:var(--navy)">Why it matters:</b> in-person payments are &euro;311B, ~23% of Adyen's volume, growing ~35% a year.</p>
+          <p class="t-desc" style="margin-top:12px"><b style="color:var(--navy)">The gap:</b> IPP NPS is 57.7 vs 66.2 overall (8.5 points lower) and escalations rose to 3.5%. The experience is the opportunity.</p>
+        </div>
         <div>
-          <ul class="jtbd how">
-            <li><b style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>Current</b><span>The same few actions run the whole fleet. But we keep adding a page for each new way to show them, now a dozen CA and back-office pages.
-            <div class="collapse">
-              <div class="col">
-                <div class="clbl">Today's pages</div>
-                <div class="subl">Customer Area</div>
-                <div class="chips">
-                  <span class="chip">Device list</span>
-                  <span class="chip">Stores</span>
-                  <span class="chip">Tap to Pay &amp; readers</span>
-                  <span class="chip">Orders &amp; returns</span>
-                  <span class="chip">Terminal apps</span>
-                  <span class="chip">Terminal software</span>
-                  <span class="chip">Terminal themes</span>
-                  <span class="chip">Device settings</span>
-                </div>
-                <div class="subl" style="margin-top:11px">Back office adds</div>
-                <div class="chips">
-                  <span class="chip">Control center</span>
-                  <span class="chip">Release overview</span>
-                  <span class="chip">Inheritance tool</span>
-                  <span class="chip">Settings profiles</span>
-                </div>
-              </div>
-              <div class="conv"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
-              <div class="col act">
-                <div class="clbl">A few repeating actions</div>
-                <div class="chips">
-                  <span class="chip act">View &amp; report</span>
-                  <span class="chip act">Configure settings</span>
-                  <span class="chip act">Deploy apps &amp; software</span>
-                  <span class="chip act">Reassign devices</span>
-                  <span class="chip act">Manage stores &amp; orders</span>
-                </div>
-                <p style="margin-top:16px;font-size:var(--fs-label);line-height:1.4;color:var(--accentd)">We keep extending pages for how we display information; the actions underneath stay the same few.</p>
-              </div>
-            </div></span></li>
-            <li style="margin-top:16px;border-top:1px solid var(--line);padding-top:22px"><b style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Future</b><span>Simplified, JTBD-based surfaces with embedded intelligence.</span></li>
+          <div class="ohd">The device lifecycle</div>
+          <ul class="list">
+            <li><span class="n">01</span><span><b>Order &amp; fulfil</b>: order the right hardware, ship, replace and return.</span></li>
+            <li><span class="n">02</span><span><b>Onboard &amp; board</b>: bring terminals live and assign them to stores.</span></li>
+            <li><span class="n">03</span><span><b>Configure</b>: set payment features, POS limits and branding, via reusable profiles.</span></li>
+            <li><span class="n">04</span><span><b>Operate, monitor &amp; update</b>: watch fleet health, fix counter issues, roll out firmware/SDK updates.</span></li>
+            <li><span class="n">05</span><span><b>Reassign &amp; retire</b>: move terminals across stores, repair and return.</span></li>
           </ul>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:var(--fs-label);font-weight:700;color:var(--navy);margin-bottom:6px">Dependencies with Channels</div>
+            <p class="t-desc" style="font-size:var(--fs-body-2)">Devices is the backend controlling the whole terminal and SoftPOS layer, with a hardware abstraction layer (middleware) that keeps the fleet vendor-independent; Channels owns the unified, device-independent application that runs on top. At runtime Devices supplies device health and diagnostics; Channels renders them on-device, including error messages and self-serve actions.</p>
+          </div>
         </div>
       </div>
       <div class="foot"><span>Devices vision project</span><span>02</span></div>
     </section>
 
-    <!-- 3 THE NORTH STAR -->
+    <!-- 3 THE NORTH STAR (current -> future -> north star) -->
     <section class="slide">
       <div class="grid">
-        <div class="side"><div class="t-h1">The North Star</div><div class="t-h2">where Devices is heading, in three JTBD surfaces</div>
-          <p class="t-desc" style="margin-top:18px"><b style="color:var(--navy)">What it is:</b> Devices built around jobs, not the tools we've accumulated.</p>
-          <p class="t-desc" style="margin-top:12px"><b style="color:var(--navy)">Why we need it:</b> to align on one direction, and to make sure each near-term build adds up to a coherent whole instead of another standalone tool.</p>
+        <div class="side"><div class="t-h1">The North Star</div><div class="t-h2">from today's fragmented journeys to jobs-based surfaces</div>
+          <p class="t-desc" style="margin-top:18px"><b style="color:var(--navy)">Today:</b> a dozen CA and back-office pages for the same few actions, fragmented, duplicated and hard to support.</p>
+          <p class="t-desc" style="margin-top:12px"><b style="color:var(--navy)">Future:</b> Devices built around jobs, not the tools we've accumulated, with intelligence embedded.</p>
+          <p class="t-desc" style="margin-top:12px"><b style="color:var(--navy)">Why we need it:</b> to align on one direction, so each near-term build adds up to a coherent whole.</p>
         </div>
         <div>
           <ul class="list">
-            <li><span class="n">01</span><span><b>Device intelligence</b>: business, payments and device health in one view, with Ask. Replaces today's blind spot, where there's no bird's-eye view of the fleet.<span style="display:block;margin-top:6px;color:var(--navy)"><b>Fleet health is the first slice we build here.</b></span><span class="jarea">Business enablement &middot; Fleet security analysis</span></span></li>
-            <li><span class="n">02</span><span><b>Devices &amp; locations</b>: lifecycle, onboarding and reassignment by prompt, troubleshooting.<span class="jarea">Lifecycle &amp; fulfilment &middot; Onboarding &amp; reassignment &middot; Troubleshooting</span></span></li>
-            <li><span class="n">03</span><span><b>Device studio</b>: a wizard and simulator for config, saved as reusable profiles.<span class="jarea">Customization &middot; Payment feature configuration</span></span></li>
+            <li><span class="n">01</span><span><b>Fleet health, diagnostics &amp; updates</b>: see the health of every terminal, let store staff fix counter issues before they stop a sale, and roll out firmware/SDK updates safely across the fleet.<span style="display:block;margin-top:6px;color:var(--navy)"><b>Fleet health is the first slice we build here.</b></span><span class="jarea">Device intelligence</span></span></li>
+            <li><span class="n">02</span><span><b>Lifecycle, onboarding &amp; reassignment</b>: order, ship, replace and return terminals (with stock, repairs and warranties), and onboard or reassign them across stores by business need, without part-mapping or assignment errors.<span class="jarea">Devices &amp; locations</span></span></li>
+            <li><span class="n">03</span><span><b>Configuration &amp; profiles</b>: build reusable configuration profiles (Company &rarr; Merchant &rarr; Store &rarr; Device), set payment features and POS limits, and brand the terminal screen.<span class="jarea">Device studio</span></span></li>
           </ul>
           <div style="margin-top:26px;padding-top:22px;border-top:1px solid var(--line)">
             <div style="font-weight:700;color:var(--navy);font-size:var(--fs-body-2);margin-bottom:15px">AI is the thread across all three surfaces, enabling the entire job to be done, not just showing data.</div>
@@ -308,26 +286,32 @@
       <div class="foot"><span>Devices vision project</span><span>03</span></div>
     </section>
 
-    <!-- 4 WHY THIS MATTERS -->
+    <!-- 4 FIRST BUILDING BLOCK: FLEET HEALTH -->
     <section class="slide">
       <div class="imp">
-        <div class="t-h1">Why this matters</div>
-        <div class="t-h2" style="margin-top:6px">A fast-growing business, with a customer-experience gap to close</div>
-        <div class="opp" style="margin-top:30px">
+        <div class="t-h1">First building block: Fleet health</div>
+        <div class="t-h2" style="margin-top:6px">Inside Device intelligence, where the pain is sharpest and the data already exists. <b style="color:var(--navy)">WIP, 2027.</b></div>
+        <div class="opp" style="margin-top:24px">
           <div class="ocol">
-            <div class="ohd">The playing field</div>
-            <div class="ostat"><div class="big"><span class="ac">&euro;311 billion</span> in-person volume</div><span class="lbl">23% of Adyen's payment volume today (&euro;311B in '25).</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
-            <div class="ostat"><div class="big">35% growth in 2025</div><span class="lbl">Well ahead of the rest of payments (48% in 2024).</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
-            <div class="ostat"><div class="big">&euro;8.8 trillion total market</div><span class="lbl">Retail: we handle &euro;332B of a &euro;10Tn market; F&amp;B: &euro;107B of &euro;2.4Tn.</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
+            <div class="ohd">Why here, and what we're testing</div>
+            <ul class="spec">
+              <li><b>Hardware fails at the counter.</b> #1 detractor, ~9,100 tickets.</li>
+              <li><b>No actionable fleet reporting.</b> Reporting 5.74/7, 2nd-lowest.</li>
+              <li><b>Troubleshooting is reactive.</b> Most tickets from live-integration merchants.</li>
+            </ul>
+            <p style="margin-top:16px;padding-left:16px;border-left:2px solid var(--muted);font-style:italic;color:var(--navy);font-size:var(--fs-body-2);line-height:1.4">"Why isn't this terminal working?" &middot; "Which of my stores need attention right now?" &middot; "I can't even see which terminals are locked, or why." <span style="font-style:normal;color:var(--muted)">Merchant</span></p>
           </div>
           <div class="ocol">
-            <div class="ohd">The experience gap</div>
-            <div class="ostat"><div class="big">NPS 57.7 vs 66.22</div><span class="lbl">Major IPP customers, 8.5 points below Adyen overall.</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
-            <div class="ostat"><div class="big">Escalations 3.5% in '25</div><span class="lbl">Up from 1.7% in '24, improving to 2.6% in '26.</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
-            <div class="ostat"><div class="big">Reliability on recent launches</div><span class="lbl">Recent launches (e.g. the P630) hit reliability issues. The gap is the opportunity.</span><span class="src">In Store Experience / IPP strategy 2027</span></div>
+            <div class="ohd">The design: four building blocks</div>
+            <ul class="list">
+              <li><span class="n">01</span><span><b>Fleet health overview</b>: an at-a-glance view across the fleet.</span></li>
+              <li><span class="n">02</span><span><b>What to act on</b>: the device list, down to individual logs.</span></li>
+              <li><span class="n">03</span><span><b>Fleet trends</b>: the metrics to improve, over time.</span></li>
+              <li><span class="n">04</span><span><b>Stores to watch</b>: which stores need attention, into store status.</span></li>
+            </ul>
+            <p class="t-desc" style="margin-top:14px;font-size:var(--fs-body-2)">Fleet-wide <b style="color:var(--navy)">&rarr;</b> Store <b style="color:var(--navy)">&rarr;</b> Single device.</p>
           </div>
         </div>
-        <p class="sig-note" style="margin-top:22px">Sources: In Store Experience / IPP strategy 2027 &middot; NPS H1 2026 (Adyen overall base 66.2).</p>
       </div>
       <div class="foot"><span>Devices vision project</span><span>04</span></div>
     </section>
@@ -350,7 +334,7 @@
                 <tr><td class="th" style="color:var(--accentd)"><b>Firmware / SDK updates</b></td><td class="r vol">~2,520</td><td class="r"><span class="badge" style="background:#fef3f2;color:#b42318">Negative</span></td></tr>
               </tbody>
             </table>
-            <p class="sig-note"><b>Counts are support tickets per theme</b> (of 61,842); themes aren't exclusive, so they flag where the pain is, not an absolute ticket count. <span style="display:block;margin-top:6px"><b>Support bottleneck:</b> lowest NPS dimension (5.71); of 323 Slack questions, 19% resolved, 61% open.</span> <span style="display:block;margin-top:6px">Sources: Unwrap &middot; NPS H1 2026 &middot; IPP Slack Q&amp;A &middot; Ops / partner interviews.</span></p>
+            <p class="sig-note"><b>Counts are tickets per theme</b> (of 61,842); themes aren't exclusive, so they flag where the pain is, not an absolute ticket count. <span style="display:block;margin-top:6px"><b>Lowest NPS dimensions:</b> Support 5.71 and Reporting 5.74 of 7 (fleet reporting/analytics); of 323 Slack questions, 19% resolved, 61% open.</span> <span style="display:block;margin-top:6px">Sources: Unwrap &middot; NPS H1 2026 &middot; IPP Slack Q&amp;A &middot; Ops / partner interviews.</span></p>
           </div>
           <div class="ocol">
             <div class="ohd">In their words</div>
@@ -364,41 +348,7 @@
       <div class="foot"><span>Devices vision project</span><span>05</span></div>
     </section>
 
-    <!-- 6 FIRST BUILDING BLOCK: FLEET HEALTH (merged) -->
-    <section class="slide">
-      <div class="imp">
-        <div class="t-h1">First building block: Fleet health</div>
-        <div class="t-h2" style="margin-top:6px">Inside Device intelligence, where the pain is sharpest and the data already exists. <b style="color:var(--navy)">WIP, 2027.</b></div>
-        <div class="opp" style="margin-top:24px">
-          <div class="ocol">
-            <div class="ohd">Why here, and what we're testing</div>
-            <ul class="spec">
-              <li><b>Hardware fails at the counter.</b> #1 detractor, ~9,100 tickets.</li>
-              <li><b>No actionable fleet reporting.</b> Reporting 5.74/7, 2nd-lowest.</li>
-              <li><b>Troubleshooting is reactive.</b> Most tickets from live-integration merchants.</li>
-            </ul>
-            <ul class="hyp" style="margin-top:14px">
-              <li style="padding:0;margin-bottom:10px;border:none"><span class="hl">H1 &middot; Self-serve troubleshooting</span><span class="ht" style="font-size:var(--fs-body-2)"><b style="color:var(--navy)">Advanced logs</b> <span class="so">so that</span> merchants self-serve and Adyen gets fewer tickets.</span></li>
-              <li style="padding:0;margin-bottom:0;border:none"><span class="hl">H2 &middot; Control through metrics</span><span class="ht" style="font-size:var(--fs-body-2)"><b style="color:var(--navy)">Fleet health metrics</b> <span class="so">so that</span> merchants act and feel in control.</span></li>
-            </ul>
-          </div>
-          <div class="ocol">
-            <div class="ohd">The design: four building blocks</div>
-            <ul class="list">
-              <li><span class="n">01</span><span><b>Fleet health overview</b>: an at-a-glance view across the fleet.</span></li>
-              <li><span class="n">02</span><span><b>What to act on</b>: the device list, down to individual logs.</span></li>
-              <li><span class="n">03</span><span><b>Fleet trends</b>: the metrics to improve, over time.</span></li>
-              <li><span class="n">04</span><span><b>Stores to watch</b>: which stores need attention, into store status.</span></li>
-            </ul>
-            <p class="t-desc" style="margin-top:14px;font-size:var(--fs-body-2)">Fleet-wide <b style="color:var(--navy)">&rarr;</b> Store <b style="color:var(--navy)">&rarr;</b> Single device.</p>
-          </div>
-        </div>
-        <p style="margin-top:18px;padding-left:16px;border-left:2px solid var(--muted);font-style:italic;color:var(--navy);font-size:var(--fs-body-2);line-height:1.4">"Why isn't this terminal working?" &middot; "Which of my stores need attention right now?" &middot; "I can't even see which terminals are locked, or why." <span style="font-style:normal;color:var(--muted)">Merchant</span></p>
-      </div>
-      <div class="foot"><span>Devices vision project</span><span>06</span></div>
-    </section>
-
-    <!-- 7 IMPACT LADDER -->
+    <!-- 6 IMPACT LADDER -->
     <section class="slide">
       <div class="imp">
         <div class="t-h1">Impact ladder</div>
@@ -425,21 +375,7 @@
           <li><b>Not yet sized:</b> financial impact (&euro;) needs Looker / Grafana.</li>
         </ul>
       </div>
-      <div class="foot"><span>Devices vision project</span><span>07</span></div>
-    </section>
-
-    <!-- 8 FEEDBACK -->
-    <section class="slide center">
-      <div class="wrap">
-        <div class="t-title" style="font-size:var(--fs-title)">What I'd love your<br>feedback on</div>
-        <ul class="list plain" style="margin-top:22px;max-width:820px">
-          <li><span class="n">01</span><span><b>Go / no-go on the three-surface framing.</b> The right North Star?</span></li>
-          <li><span class="n">02</span><span>Does <b>Fleet health as the 2027 first step</b> fit the H1 2027 roadmap P0s?</span></li>
-          <li><span class="n">03</span><span>One <b>global AI assistant, or one per surface?</b> How far to push prompt-based bulk actions?</span></li>
-        </ul>
-        <p class="t-desc" style="margin-top:24px;font-size:var(--fs-lead)">Thank you. Let's discuss.</p>
-      </div>
-      <div class="foot"><span>Devices vision project</span><span>08</span></div>
+      <div class="foot"><span>Devices vision project</span><span>06</span></div>
     </section>
 
     <div class="nav">
